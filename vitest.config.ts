@@ -7,7 +7,6 @@ export default defineVitestConfig(() => {
     viteConfig,
     defineVitestConfig({
       test: {
-        name: 'myLib',
         reporters: 'verbose',
       },
     }),
