@@ -1,0 +1,12 @@
+.git
+.idea
+.vscode
+.husky
+
+node_modules
+
+# dest folders
+dist
+
+# test coverage files
+coverage

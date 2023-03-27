@@ -1,0 +1,50 @@
+{
+  "name": "vite-lib-template",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run --mode development",
+    "type:check": "tsc --noEmit",
+    "lint:staged": "eslint --format codeframe",
+    "lint": "npm run lint:staged -- '**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "npm run lint -- --fix",
+    "format:staged": "prettier-eslint --write",
+    "format:scripts": "npm run format:staged -- '**/*.{js,jsx,ts,tsx}'",
+    "format:others": "npm run format:staged -- '**/*.{css,scss,json,yml,yaml}'",
+    "format:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx,css,scss,json,yml,yaml}'",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zadzbw/vite-lib-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zadzbw/vite-lib-template/issues"
+  },
+  "homepage": "https://github.com/zadzbw/vite-lib-template#readme",
+  "browserslist": [
+    "defaults",
+    "> 1%",
+    "not IE 11"
+  ],
+  "engines": {
+    "node": ">= 16"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.10",
+    "eslint": "^8.36.0",
+    "eslint-config-zad": "^1.0.7",
+    "eslint-formatter-codeframe": "^7.32.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.7",
+    "prettier-eslint-cli": "^7.1.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.2.1",
+    "vitest": "^0.29.7"
+  }
+}
