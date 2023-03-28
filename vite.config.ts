@@ -23,6 +23,7 @@ export default defineConfig({
     __DEV__: isDev,
   },
   build: {
+    target: 'modules',
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: pascalPkgName,

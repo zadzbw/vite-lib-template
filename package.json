@@ -5,7 +5,7 @@
   "description": "",
   "main": "./dist/cjs/my-lib.js",
   "module": "./dist/es/my-lib.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/cjs/my-lib.js",
@@ -18,9 +18,10 @@
   "scripts": {
     "type:check": "tsc --noEmit",
     "dev": "NODE_ENV=development vite",
-    "build": "npm run type:check && npm run build:bundle && npm run build:types",
+    "clean": "rimraf dist",
+    "build": "npm run type:check && npm run clean && npm run build:bundle && npm run build:types",
     "build:bundle": "NODE_ENV=production vite build",
-    "build:types": "dts-bundle-generator --config ./dts.config.ts",
+    "build:types": "tsc -p tsconfig.types.json",
     "test": "vitest run --mode development",
     "test:dev": "vitest --ui --mode development",
     "test:coverage": "vitest run --mode development --coverage",
@@ -51,11 +52,11 @@
   "engines": {
     "node": ">= 16"
   },
+  "dependencies": {},
   "devDependencies": {
     "@types/node": "^18.15.10",
     "@vitest/coverage-c8": "^0.29.7",
     "@vitest/ui": "^0.29.7",
-    "dts-bundle-generator": "^7.2.0",
     "eslint": "^8.36.0",
     "eslint-config-zad": "^1.0.7",
     "eslint-formatter-codeframe": "^7.32.1",
@@ -63,6 +64,7 @@
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",
     "prettier-eslint-cli": "^7.1.0",
+    "rimraf": "^4.4.1",
     "typescript": "^5.0.2",
     "vite": "^4.2.1",
     "vitest": "^0.29.7"
