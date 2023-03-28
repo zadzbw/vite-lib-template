@@ -25,7 +25,9 @@ If you prefer to do it manually with the cleaner git history.
 npx degit zadzbw/vite-lib-template my-app
 
 cd my-app
-yarn install
+
+npm install pnpm --global
+pnpm install
 ```
 
 and then you can start creating your library.
