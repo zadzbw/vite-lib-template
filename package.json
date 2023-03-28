@@ -1,6 +1,7 @@
 {
   "name": "my-lib",
   "private": true,
+  "packageManager": "pnpm@8.0.0",
   "version": "1.0.0",
   "description": "",
   "main": "./dist/cjs/my-lib.js",
@@ -30,8 +31,8 @@
     "lint:fix": "npm run lint -- --fix",
     "format:staged": "prettier-eslint --write",
     "format:scripts": "npm run format:staged -- '**/*.{js,jsx,ts,tsx}'",
-    "format:others": "npm run format:staged -- '**/*.{css,scss,json,yml,yaml}'",
-    "format:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx,css,scss,json,yml,yaml}'",
+    "format:others": "npm run format:staged -- 'src/**/*.{css,scss,json}'",
+    "format:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx,css,scss,json}'",
     "prepare": "husky install"
   },
   "repository": {
