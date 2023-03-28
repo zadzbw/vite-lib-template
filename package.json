@@ -62,7 +62,6 @@
     "eslint-formatter-codeframe": "^7.32.1",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
-    "pnpm": "^8.0.0",
     "prettier": "^2.8.7",
     "prettier-eslint-cli": "^7.1.0",
     "rimraf": "^4.4.1",
