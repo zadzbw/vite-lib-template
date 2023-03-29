@@ -19,15 +19,31 @@ A vite template for creating a library with typescript, eslint, prettier, vitest
 
 ### Clone to local
 
-If you prefer to do it manually with the cleaner git history.
+If you prefer to do it manually with the cleaner git history, you can do the following:
+
+1. download the template
 
 ```bash
 npx degit zadzbw/vite-lib-template my-app
+```
 
+2. push to your own repo
+
+```bash
 cd my-app
 
+git init
+git add .
+git commit -m "commit message"
+git remote add origin https://github.com/username/repositoryname.git
+git push -u origin main
+```
+
+3. install dependencies
+
+```bash
 npm install pnpm --global
-pnpm install
+pnpm install --frozen-lockfile
 ```
 
 and then you can start creating your library.

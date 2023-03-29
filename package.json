@@ -40,7 +40,7 @@
     "url": "git+https://github.com/zadzbw/vite-lib-template.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zadzbw/vite-lib-template/issues"
   },
