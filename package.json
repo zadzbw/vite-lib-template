@@ -51,7 +51,7 @@
     "not IE 11"
   ],
   "engines": {
-    "node": ">= 16"
+    "node": ">= 18"
   },
   "devDependencies": {
     "@types/node": "^18.15.10",
@@ -68,5 +68,8 @@
     "typescript": "^5.0.2",
     "vite": "^4.2.1",
     "vitest": "^0.29.7"
+  },
+  "volta": {
+    "node": "18.15.0"
   }
 }
